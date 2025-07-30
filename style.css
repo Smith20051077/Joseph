@@ -1,0 +1,297 @@
+:root {
+  --rosa: #e91e63;
+  --claro: #fff0f6;
+  --gris: #333;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 251, 251);
+  color: var(--gris);
+}
+
+.main-header {
+  background-color: var(--rosa);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--claro);
+  padding: 1rem;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  margin: 1rem 0;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  color: var(--rosa);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service {
+  background-color: var(--claro);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--rosa);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #d81b60;
+}
+
+footer {
+  background-color: var(--gris);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ff80ab;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+/* Menu normal en pantallas grandes */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .main-header {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+/* Galería */
+.gallery-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 180px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonios */
+.testimonials-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.testimonial {
+  background-color: #fff0f6;
+  border-left: 5px solid var(--rosa);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.testimonial h4 {
+  color: var(--rosa);
+  margin: 0;
+}
+
+/* Responsive testimonios en filas */
+@media (min-width: 768px) {
+  .testimonials {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@keyframes slide {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(-100%);}
+  66% {transform: translateX(-200%);}
+  100% {transform: translateX(0);}
+}
+.reserva-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+.reserva-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+.reserva-section input,
+.reserva-section select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.reserva-section button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: var(--rosa);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.reserva-section button:hover {
+  background-color: #d81b60;
+}
+
+#gamour {
+  background: #121212;
+  border-radius: 12px;
+  padding: 32px 20px;
+  margin: 32px auto;
+  max-width: 420px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
+}
+#gamour h2 {
+  font-size: 1.7rem;
+  color: #fcfcfc;
+  margin-bottom: 12px;
+}
+#gamour p {
+  color: #fefefe;
+  font-size: 1.1rem;
+}
+.btn-gamour .btn {
+  background: #ede2e2;
+  color: #010101;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+.btn-gamour .btn:hover {
+  background: #e91e63;
+}
